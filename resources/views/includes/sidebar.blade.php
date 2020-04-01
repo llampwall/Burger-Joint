@@ -16,9 +16,6 @@
         <a href="/offers">Offers</a>
       </li>
       <li>
-        <a href="/giftcards">Gift Cards</a>
-      </li>
-      <li>
         <a href="/waitlist">Waitlist</a>
       </li>
       <li>

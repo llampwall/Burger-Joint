@@ -1,4 +1,4 @@
-#about-page {
+#contact-page {
     padding: 100px;
 
     h1 {
@@ -16,14 +16,19 @@
 }
 // Small devices - landscape phones (under 768px)
 @include media-breakpoint-down(sm) {
-    #about-page {
+    #contact-page {
         height: 100vh;
         padding: 30px;
+
+        .content-box {
+            height: 90vh;
+            overflow-y: scroll;
+        }
     }
 }
 // Medium devices - tablets (under 992px)
 @include media-breakpoint-down(md) {
-    #about-page {
+    #contact-page {
         padding: 35px;
     }
 }

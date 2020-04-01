@@ -3359,11 +3359,6 @@ h2 {
   padding: 100px;
 }
 
-#about-page .content-box {
-  background: white;
-  padding: 20px;
-}
-
 #about-page h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -3382,17 +3377,270 @@ h2 {
     height: 100vh;
     padding: 30px;
   }
-
-  #about-page .content-box {
-    height: 90vh;
-    overflow-y: scroll;
-  }
 }
 
 @media (max-width: 991.98px) {
   #about-page {
     padding: 35px;
   }
+}
+
+#waitlist-page {
+  padding: 100px;
+}
+
+#waitlist-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+#waitlist-page p {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+#waitlist-page form .form-group label {
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: black;
+}
+
+#waitlist-page form .form-group .form-control {
+  padding: 10px !important;
+  border: 2px solid #9c1b24;
+  font-size: 1.3rem;
+}
+
+#waitlist-page form .form-group button[type=submit] {
+  background: #9c1b24;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+@media (max-width: 767.98px) {
+  #waitlist-page {
+    height: 100vh;
+    padding: 30px;
+  }
+
+  #waitlist-page .content-box {
+    height: 90vh;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #waitlist-page {
+    padding: 35px;
+  }
+}
+
+#offers-page {
+  padding: 100px;
+}
+
+#offers-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+#offers-page p {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+#offers-page form .form-group label {
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: black;
+}
+
+#offers-page form .form-group .form-control {
+  padding: 10px !important;
+  border: 2px solid #9c1b24;
+  font-size: 1.3rem;
+}
+
+#offers-page form .form-group button[type=submit] {
+  background: #9c1b24;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+#offers-page form .form-group .form-check-label {
+  margin-top: 5px;
+}
+
+@media (max-width: 767.98px) {
+  #offers-page {
+    height: 100vh;
+    padding: 30px;
+  }
+
+  #offers-page .content-box {
+    height: 90vh;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #offers-page {
+    padding: 35px;
+  }
+}
+
+#contact-page {
+  padding: 100px;
+}
+
+#contact-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+#contact-page p {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 767.98px) {
+  #contact-page {
+    height: 100vh;
+    padding: 30px;
+  }
+
+  #contact-page .content-box {
+    height: 90vh;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #contact-page {
+    padding: 35px;
+  }
+}
+
+#menu-index {
+  padding: 100px;
+}
+
+#menu-index #food-preview {
+  padding: 0;
+  background: transparent;
+}
+
+#menu-index #food-preview h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+#menu-index #food-preview .food-slider {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+#menu-index #food-preview .food-slider .slide {
+  width: 20%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+#menu-index #food-preview .food-slider .slide:hover {
+  cursor: pointer;
+}
+
+#menu-index #food-preview .food-slider .slide:hover .background {
+  background-color: #ed4852;
+  transform: translate3d(0, -200px, 0);
+}
+
+#menu-index #food-preview .food-slider .slide:hover .content .food-title {
+  color: white;
+}
+
+#menu-index #food-preview .food-slider .slide:hover .content .description {
+  color: white;
+}
+
+#menu-index #food-preview .food-slider .slide .background {
+  background: white;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+#menu-index #food-preview .food-slider .slide .content {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+#menu-index #food-preview .food-slider .slide .content .food-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: #ed4852;
+}
+
+#menu-index #food-preview .food-slider .slide .content .description {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  color: #7a8d99;
+}
+
+#menu-index #food-preview .food-slider .slide .content img {
+  width: 95%;
+  max-width: 250px;
+}
+
+@media (max-width: 767.98px) {
+  #menu-index {
+    height: 100vh;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #menu-index {
+    padding: 35px;
+  }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -3522,8 +3770,14 @@ body {
 #app-layout #content-section {
   background: #ed4852;
   background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  overflow-y: scroll;
   width: 100%;
   height: 100vh;
+}
+
+#app-layout #content-section .content-box {
+  background: white;
+  padding: 20px;
 }
 
 #information {
@@ -3633,6 +3887,7 @@ body {
   width: 20%;
   height: 500px;
   position: relative;
+  overflow: hidden;
 }
 
 #food-preview .food-slider .slide:hover {
@@ -3641,7 +3896,7 @@ body {
 
 #food-preview .food-slider .slide:hover .background {
   background-color: #ed4852;
-  transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, -200px, 0);
 }
 
 #food-preview .food-slider .slide:hover .content .food-title {
@@ -3664,12 +3919,14 @@ body {
 }
 
 #food-preview .food-slider .slide .content {
+  height: 100%;
   width: 100%;
   z-index: 2;
   position: absolute;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease-in-out;
 }

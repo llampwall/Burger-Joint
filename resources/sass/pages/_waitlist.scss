@@ -1,0 +1,58 @@
+#waitlist-page {
+    padding: 100px;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: black;
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
+    form {
+        .form-group {
+            label {
+                font-weight: 700;
+                margin-bottom: 0.7rem;
+                color: black;
+            }
+
+            .form-control {
+                padding: 10px !important;
+                border: 2px solid #9c1b24;
+                font-size: 1.3rem;
+            }
+
+            button[type="submit"] {
+                background: #9c1b24;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+// Small devices - landscape phones (under 768px)
+@include media-breakpoint-down(sm) {
+    #waitlist-page {
+        height: 100vh;
+        padding: 30px;
+
+        .content-box {
+            height: 90vh;
+            overflow-y: scroll;
+        }
+    }
+}
+// Medium devices - tablets (under 992px)
+@include media-breakpoint-down(md) {
+    #waitlist-page {
+        padding: 35px;
+    }
+}

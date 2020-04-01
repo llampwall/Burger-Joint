@@ -33,7 +33,7 @@
 
     <h2>We have everything you need to kill your hunger</h2>
 
-    <div class="button-rounded">View Our Menu</div>
+    <a href="/menu" class="button-rounded">View Our Menu</a>
 
     <div class="food-slider">
 
