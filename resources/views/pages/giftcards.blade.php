@@ -2,6 +2,6 @@
 
 @section('content')
   <div class="welcome-jumbo">
-    <h1 class="animated bounceInUp">Gift Cards</h1>
+    <h1>Gift Cards</h1>
   </div>
 @endsection

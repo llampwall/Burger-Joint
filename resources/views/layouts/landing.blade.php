@@ -14,7 +14,7 @@
     </head>
     <body>
 
-  <section id="welcome">
+  <section id="app-layout">
     @include('includes.sidebar')
 
     <div class="welcome-jumbo">
@@ -24,16 +24,9 @@
       <h1 class="animated bounceInUp">Double Down Burger</h1>
       <img src="/img/burger.png" class="burger-fries animated bounceInUp">
     </div>
-
   </section>
 
   @yield('content')
-
-
-
-  <div>
-
-  </div>
 
 </body>
 

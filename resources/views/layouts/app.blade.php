@@ -14,7 +14,8 @@
     </head>
     <body>
 
-  <section id="welcome">
+  <section id="app-layout">
+    
     @include('includes.sidebar')
 
     @yield('content')

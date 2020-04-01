@@ -2,6 +2,6 @@
 
 @section('content')
   <div class="welcome-jumbo">
-    <h1 class="animated bounceInUp">Wait List</h1>
+    <h1>Waitlist</h1>
   </div>
 @endsection

@@ -1,4 +1,4 @@
-<div class="welcome-menu">
+<div class="sidebar">
   <a href="/" class="logo">
     <img src="/img/logo.png">
   </a>
@@ -13,13 +13,16 @@
         <a href="/menu">Menu</a>
       </li>
       <li>
-        <a href="/waitlist">Waitlist</a>
-      </li>
-      <li>
         <a href="/offers">Offers</a>
       </li>
       <li>
         <a href="/giftcards">Gift Cards</a>
+      </li>
+      <li>
+        <a href="/waitlist">Waitlist</a>
+      </li>
+      <li>
+        <a href="/about">About Us</a>
       </li>
     </ul>
   </div>

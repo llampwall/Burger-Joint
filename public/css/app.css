@@ -139,34 +139,112 @@ table {
   border-spacing: 0;
 }
 
-#welcome {
+.welcome-jumbo {
+  background: #ed4852;
+  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: calc(100vw - 350px);
+  overflow: hidden;
+  padding: 100px;
+}
+
+.welcome-jumbo .status {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.welcome-jumbo h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  align-self: flex-start;
+  color: white;
+  margin-bottom: 100px;
+}
+
+.welcome-jumbo .burger-fries {
+  width: 100%;
+  position: relative;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+body {
+  line-height: 1;
+  background: white;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#app-layout {
   display: grid;
   grid-template-columns: 350px 1fr;
   width: 100%;
   height: 100vh;
 }
 
-#welcome .welcome-menu {
+#app-layout .sidebar {
   background: white;
   padding: 50px;
   position: relative;
 }
 
-#welcome .welcome-menu .logo {
+#app-layout .sidebar .logo {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-#welcome .welcome-menu .logo img {
+#app-layout .sidebar .logo img {
   max-width: 100px;
 }
 
-#welcome .welcome-menu .menu {
+#app-layout .sidebar .menu {
   margin-bottom: 50px;
 }
 
-#welcome .welcome-menu .menu .menu-title {
+#app-layout .sidebar .menu .menu-title {
   text-transform: uppercase;
   color: #0971ce;
   font-weight: 700;
@@ -176,7 +254,7 @@ table {
   margin-bottom: 20px;
 }
 
-#welcome .welcome-menu .menu .links li a {
+#app-layout .sidebar .menu .links li a {
   color: black;
   font-weight: 700;
   text-decoration: none;
@@ -186,15 +264,15 @@ table {
   transition: color 0.3s ease-in-out;
 }
 
-#welcome .welcome-menu .menu .links li a:hover {
+#app-layout .sidebar .menu .links li a:hover {
   color: red;
 }
 
-#welcome .welcome-menu .social-icons {
+#app-layout .sidebar .social-icons {
   display: flex;
 }
 
-#welcome .welcome-menu .social-icons a {
+#app-layout .sidebar .social-icons a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,62 +286,22 @@ table {
   margin-right: 10px;
 }
 
-#welcome .welcome-menu .location {
+#app-layout .sidebar .location {
   position: absolute;
   bottom: 80px;
 }
 
-#welcome .welcome-menu .location .address {
+#app-layout .sidebar .location .address {
   color: #7a8d99;
   line-height: 1.7rem;
   margin-bottom: 20px;
 }
 
-#welcome .welcome-menu .location .phone a {
+#app-layout .sidebar .location .phone a {
   color: #0971ce;
   font-size: 2rem;
   font-weight: 700;
   text-decoration: none;
-}
-
-#welcome .welcome-jumbo {
-  background: #ed4852;
-  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: calc(100vw - 350px);
-  overflow: hidden;
-  padding: 100px;
-}
-
-#welcome .welcome-jumbo .status {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 0.8rem;
-  color: white;
-  background: black;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 5px;
-  align-self: flex-start;
-  margin-bottom: 20px;
-}
-
-#welcome .welcome-jumbo h1 {
-  font-size: 4rem;
-  font-weight: 900;
-  align-self: flex-start;
-  color: white;
-  margin-bottom: 100px;
-}
-
-#welcome .welcome-jumbo .burger-fries {
-  width: 100%;
-  position: relative;
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
 }
 
 #information {
@@ -430,43 +468,5 @@ table {
 #food-preview .food-slider .slide .content img {
   width: 95%;
   max-width: 250px;
-}
-
-h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-body {
-  line-height: 1;
-  background: white;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
 }
 
