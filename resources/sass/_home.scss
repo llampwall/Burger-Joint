@@ -7,8 +7,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // max-width: 100%;
-    max-width: calc(100vw - 350px);
+    max-width: 100%;
+    // max-width: calc(100vw - 300px);
     overflow: hidden;
     padding: 100px;
 
@@ -56,3 +56,17 @@ h2 {
     font-weight: 700;
     margin-bottom: 20px;
 }
+// Extra small devices - phones (under 576px)
+@include media-breakpoint-down(xs) {}
+// Small devices - landscape phones (under 768px)
+@include media-breakpoint-down(sm) {}
+// Medium devices - tablets (under 992px)
+@include media-breakpoint-down(md) {
+    #app-layout {
+        .welcome-jumbo {
+            padding: 50px;
+        }
+    }
+}
+// Large devices - desktops (under 1200px)
+@include media-breakpoint-down(lg) {}

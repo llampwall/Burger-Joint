@@ -1,0 +1,39 @@
+#about-page {
+    padding: 100px;
+
+    .content-box {
+        background: white;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: black;
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+// Small devices - landscape phones (under 768px)
+@include media-breakpoint-down(sm) {
+    #about-page {
+        height: 100vh;
+        padding: 30px;
+
+        .content-box {
+            height: 90vh;
+            overflow-y: scroll;
+        }
+    }
+}
+// Medium devices - tablets (under 992px)
+@include media-breakpoint-down(md) {
+    #about-page {
+        padding: 35px;
+    }
+}

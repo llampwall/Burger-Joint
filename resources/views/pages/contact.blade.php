@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="welcome-jumbo">
-    <h1>Contact Us</h1>
-  </div>
+  
+  <h1>Contact Us</h1>
+
 @endsection
