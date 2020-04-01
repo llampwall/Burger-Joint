@@ -1,0 +1,472 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);* {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#welcome {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+#welcome .welcome-menu {
+  background: white;
+  padding: 50px;
+  position: relative;
+}
+
+#welcome .welcome-menu .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .logo img {
+  max-width: 100px;
+}
+
+#welcome .welcome-menu .menu {
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .menu .menu-title {
+  text-transform: uppercase;
+  color: #0971ce;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #e2eaef;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#welcome .welcome-menu .menu .links li a {
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 1.4rem;
+  display: block;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+#welcome .welcome-menu .menu .links li a:hover {
+  color: red;
+}
+
+#welcome .welcome-menu .social-icons {
+  display: flex;
+}
+
+#welcome .welcome-menu .social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background: #c2c8cc;
+  font-size: 0.9rem;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#welcome .welcome-menu .location {
+  position: absolute;
+  bottom: 80px;
+}
+
+#welcome .welcome-menu .location .address {
+  color: #7a8d99;
+  line-height: 1.7rem;
+  margin-bottom: 20px;
+}
+
+#welcome .welcome-menu .location .phone a {
+  color: #0971ce;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#welcome .welcome-jumbo {
+  background: #ed4852;
+  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: calc(100vw - 350px);
+  overflow: hidden;
+  padding: 100px;
+}
+
+#welcome .welcome-jumbo .status {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+#welcome .welcome-jumbo h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  align-self: flex-start;
+  color: white;
+  margin-bottom: 100px;
+}
+
+#welcome .welcome-jumbo .burger-fries {
+  width: 100%;
+  position: relative;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+#information {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#information .restaurant-image {
+  height: 100%;
+}
+
+#information .restaurant-image img {
+  width: 100%;
+}
+
+#information .info {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#information .info h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#information .info .paragraphs {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 20px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #525E66;
+  margin-bottom: 3rem;
+}
+
+#information .info .about-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#information .info .about-link span {
+  margin-right: 20px;
+}
+
+#information .info .about-link .circle-right {
+  height: 40px;
+  width: 40px;
+  background: #ed4852;
+  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#information .info .about-link .circle-right .fa {
+  font-size: 1.3rem;
+  color: white;
+  position: relative;
+  top: 3%;
+  left: 4%;
+}
+
+#food-preview {
+  background: #f4f8fb;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#food-preview h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#food-preview .button-rounded {
+  background: #ed4852;
+  color: white;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 30px;
+  margin: 0 auto 130px;
+  cursor: pointer;
+}
+
+#food-preview .food-slider {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+#food-preview .food-slider .slide {
+  width: 20%;
+  height: 500px;
+  position: relative;
+}
+
+#food-preview .food-slider .slide:hover {
+  cursor: pointer;
+}
+
+#food-preview .food-slider .slide:hover .background {
+  background-color: #ed4852;
+  transform: translate3d(0, -100px, 0);
+}
+
+#food-preview .food-slider .slide:hover .content .food-title {
+  color: white;
+}
+
+#food-preview .food-slider .slide:hover .content .description {
+  color: white;
+}
+
+#food-preview .food-slider .slide .background {
+  background: white;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+#food-preview .food-slider .slide .content {
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#food-preview .food-slider .slide .content .food-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: #ed4852;
+}
+
+#food-preview .food-slider .slide .content .description {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #7a8d99;
+}
+
+#food-preview .food-slider .slide .content img {
+  width: 95%;
+  max-width: 250px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+body {
+  line-height: 1;
+  background: white;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
