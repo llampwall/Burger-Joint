@@ -9,14 +9,14 @@
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="page-header">
-                <h2 class="pageheader-title">Edit Category</h2>
+                <h2 class="pageheader-title">Edit Item</h2>
                 <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                 <div class="page-breadcrumb">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="/admin/food-categories" class="breadcrumb-link">Food Categories</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Edit Category</li>
+                            <li class="breadcrumb-item"><a href="/admin/food-categories" class="breadcrumb-link">Food Items</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Edit Item</li>
                         </ol>
                     </nav>
                 </div>
@@ -34,12 +34,20 @@
             <!-- ============================================================== -->
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="card">
-                    <h5 class="card-header">Edit Category</h5>
+                    <h5 class="card-header">Edit Item</h5>
                     <div class="card-body">
                         <form action="#" id="basicform" data-parsley-validate="" novalidate="">
                             <div class="form-group">
                                 <label for="inputCategory">Edit Name</label>
                                 <input id="inputCategory" type="text" name="category" data-parsley-trigger="change" required="" placeholder="Enter name" autocomplete="off" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputDescription">Edit Description</label>
+                                <input id="inputDescription" type="text" name="description" data-parsley-trigger="change" required="" placeholder="Enter description" autocomplete="off" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPrice">Edit Price</label>
+                                <input id="inputPrice" type="text" name="price" data-parsley-trigger="change" required="" placeholder="Enter price" autocomplete="off" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="inputImage">Edit Image URL</label>
