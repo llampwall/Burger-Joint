@@ -24,11 +24,32 @@
                     <div id="submenu-2" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/cards.html">Categories<span class="badge badge-secondary">Categories</span></a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Food categories</a>
+                                <div id="submenu-1-1" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/food-categories">All Categories<span class="badge badge-secondary">All Categories</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/food-categories/create">Create Category</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/cards.html">Items<span class="badge badge-secondary">Items</span></a>
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2-1" aria-controls="submenu-2-1">Food Items</a>
+                                <div id="submenu-2-1" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/food-items">All Items<span class="badge badge-secondary">All Items</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/food-items/create">Create Item</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
+
                         </ul>
                     </div>
                 </li>
