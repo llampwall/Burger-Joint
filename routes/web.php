@@ -35,10 +35,16 @@ Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@e
 // admin food items
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
+Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
 
 // admin customers
 Route::get('/admin/emails', 'admin\CustomersController@allEmails');
 Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
+
+// admin users
+Route::get('/admin/users', 'admin\UsersController@index');
+Route::get('/admin/users/create', 'admin\UsersController@create');
+Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
 
 // admin user auth
 Route::get('/admin/register', function () {

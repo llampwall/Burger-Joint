@@ -71,10 +71,10 @@
                     <div id="submenu-4" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/users">All Users<span class="badge badge-secondary">All Users</span></a>
+                                <a class="nav-link" href="/admin/users">All Users<span class="badge badge-secondary">All Users</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/cards.html">Create User<span class="badge badge-secondary">Create User</span></a>
+                                <a class="nav-link" href="/admin/users/create">Create User<span class="badge badge-secondary">Create User</span></a>
                             </li>
                         </ul>
                     </div>
@@ -84,7 +84,7 @@
                     <div id="submenu-5" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/cards.html">General Settings<span class="badge badge-secondary">Categories</span></a>
+                                <a class="nav-link" href="pages/cards.html">General Settings<span class="badge badge-secondary">General Settings</span></a>
                             </li>
                         </ul>
                     </div>
