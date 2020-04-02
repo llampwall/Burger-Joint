@@ -1,0 +1,47 @@
+#single-menu {
+    padding: 100px;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $mainred;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .item {
+
+        .title {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid black;
+        }
+        
+        h4, .price {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: black;
+        }
+        .description {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
+    
+
+}
+// Small devices - landscape phones (under 768px)
+@include media-breakpoint-down(sm) {
+    #single-menu {
+        height: 100vh;
+        padding: 30px;
+    }
+}
+// Medium devices - tablets (under 992px)
+@include media-breakpoint-down(md) {
+    #single-menu {
+        padding: 35px;
+    }
+}
