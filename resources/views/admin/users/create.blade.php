@@ -36,24 +36,62 @@
                 <div class="card">
                     <h5 class="card-header">New User</h5>
                     <div class="card-body">
-                        <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                        <form method="POST" action="/admin/users">
+                            @csrf
                             <div class="form-group">
-                                <label for="inputName">Name</label>
-                                <input id="inputName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter name" autocomplete="off" class="form-control">
+                                <label for="inputFirstName">First Name</label>
+                                <input id="inputFirstName" type="text" class="form-control @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus>
+
+                                @error('fname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="inputLastName">Last Name</label>
+                                <input id="inputLastName" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus>
+
+                                @error('lname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail">Email</label>
-                                <input id="inputEmail" type="email" name="email" data-parsley-trigger="change" required="" placeholder="Enter email" autocomplete="off" class="form-control">
+                                <input id="inputEmail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword">Password</label>
-                                <input id="inputPassword" type="password" name="password" data-parsley-trigger="change" required="" placeholder="********" autocomplete="off" class="form-control">
+                                <input id="inputPassword" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="password-confirm">Confirm</label>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                                 <div class="form-group">
                                 <label for="input-select">Role</label>
-                                <select class="form-control" id="inputRole">
-                                    <option>Employee</option>
-                                    <option>Admin</option>
+                                <select class="form-control" id="inputRole" name="role_id">
+                                    @foreach ($roles as $role)
+                                        <option value="{{$role->id}}" 
+                                            @if ($role->title == 'Admin')
+                                                selected
+                                            @endif
+                                        >{{$role->title}}</option>
+                                    @endforeach
                                 </select>
                               </div>
                             <div class="row">

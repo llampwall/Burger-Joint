@@ -36,7 +36,8 @@
                 <div class="card">
                     <h5 class="card-header">Edit User</h5>
                     <div class="card-body">
-                        <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                        <form method="POST" action="{{ route('register') }}">
+                            @csrf
                             <div class="form-group">
                                 <label for="inputName">Name</label>
                                 <input id="inputName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter name" autocomplete="off" class="form-control">

@@ -4,11 +4,17 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\User;
+use App\Role;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
+//handles user admin pages
 
 class UsersController extends Controller
 {
-    public function __construct()
-    {
+    // ensure user is logged in to view this page
+    public function __construct() {
         $this->middleware('auth');
     }
     
@@ -17,7 +23,24 @@ class UsersController extends Controller
     }
 
     public function create() {
-        return view('admin/users/create');
+        $roles = Role::All();
+        return view('admin/users/create', [
+            'roles' => $roles
+        ]);
+    }
+
+    public function store() {
+        $user = new User();
+        $user->fname = request('fname');
+        $user->lname = request('lname');
+        $user->email = request('email');
+        $user->password = Hash::make(request('password'));
+        $user->save();
+
+        // role-user relationship
+        $user->roles()->attach(request('role_id'));
+
+        return redirect('/admin/users');
     }
 
     public function edit() {

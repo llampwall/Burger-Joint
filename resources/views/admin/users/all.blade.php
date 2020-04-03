@@ -38,7 +38,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col">id</th>
-                                    <th scope="col">name</th>
+                                    <th scope="col">first name</th>
+                                    <th scope="col">last name</th>
                                     <th scope="col">email</th>
                                     <th scope="col">date created</th>
                                     <th scope="col">edit</th>
@@ -48,7 +49,8 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Jordan Hewitt</td>
+                                    <td>Jordan</td>
+                                    <td>Hewitt</td>
                                     <td>hewitj2@gmail.com</td>
                                     <td>4/2/2020</td>
                                     <td><a href="/admin/users/1/edit"><i class="far fa-edit"></i></a></td>
