@@ -46,6 +46,8 @@ Route::get('/admin/users', 'admin\UsersController@index');
 Route::get('/admin/users/create', 'admin\UsersController@create');
 Route::post('/admin/users', 'admin\UsersController@store');
 Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
+Route::put('/admin/users/{id}', 'admin\UsersController@update');
+Route::get('/admin/users/{id}/delete', 'admin\UsersController@delete');
 
 // admin user auth
 Route::get('/admin/register', function () {

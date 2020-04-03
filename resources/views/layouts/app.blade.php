@@ -6,6 +6,9 @@
 
         <title>JordanBurger Restaurant</title>
         
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
         <link rel="stylesheet" href="/css/app.css">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     </head>
@@ -16,10 +19,21 @@
     @include('includes.sidebar')
 
     <section id="content-section">
-      @yield('content')
+        
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
+
+        @yield('content')
+
     </section>
-    
+
   </section>
+
+  
+
 </body>
 
 </html>
