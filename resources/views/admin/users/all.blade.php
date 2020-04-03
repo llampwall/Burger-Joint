@@ -1,3 +1,6 @@
+{{--> DISPLAY ALL USERS <--}}
+
+
 @extends('layouts.admin')
 
 @section('content')
@@ -47,17 +50,21 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($users as $user)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Jordan</td>
-                                    <td>Hewitt</td>
-                                    <td>hewitj2@gmail.com</td>
-                                    <td>4/2/2020</td>
-                                    <td><a href="/admin/users/1/edit"><i class="far fa-edit"></i></a></td>
-                                <td><a href="/admin/users/1/delete" onclick="if (! confirm('Are you sure you want to delete this category?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
+                                    <th scope="row">{{$user->id}}</th>
+                                    <td>{{$user->fname}}</td>
+                                    <td>{{$user->lname}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{date('m/d/y', strtotime($user->updated_at))}}</td>
+                                    <td><a href="/admin/users/{{$user->id}}/edit"><i class="far fa-edit"></i></a></td>
+                                    <td><a href="/admin/users/{{$user->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this user?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
+                        {{-- pagination --}}
+                        {{ $users->links() }}
                     </div>
                 </div>
             </div>
