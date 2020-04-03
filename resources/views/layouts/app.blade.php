@@ -18,6 +18,7 @@
     <section id="content-section">
       @yield('content')
     </section>
+    
   </section>
 </body>
 
