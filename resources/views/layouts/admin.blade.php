@@ -136,7 +136,7 @@
                                                 </li>
                                             @endif
                                         @else
-                                            {{ Auth::user()->name }}
+                                            {{ Auth::user()->fname }} {{ Auth::user()->lname }} 
                                         @endguest
                                     </h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
