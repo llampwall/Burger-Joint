@@ -54,7 +54,7 @@
                                     <td>9.99</td>
                                     <td>4/2/2020</td>
                                     <td><a href="/admin/food-items/1/edit"><i class="far fa-edit"></i></a></td>
-                                <td><a href="/admin/food-items/1/delete" onclick="if (! confirm('Are you sure you want to delete this category?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
+                                <td><a href="/admin/food-items/1/delete" onclick="if (! confirm('Are you sure you want to delete this item?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>
