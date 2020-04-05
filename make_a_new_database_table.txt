@@ -19,8 +19,8 @@ views display the data in whatever form needed.
 This is how we added the food_categories and food_items tables to the database.
 
 
-1. php artisan make:model -m -s
-that generates the php file, as well as the migration and seeder
+1. php artisan make:model FoodCategories -m -s
+that generates the php file, as well as the migration and seeder (controller was already there so no -c)
 
 2. edit the migration to include the desired columns
 

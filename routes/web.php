@@ -44,7 +44,10 @@ Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
 Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
 // admin customers
-Route::get('/admin/emails', 'admin\CustomersController@allEmails');
+
+// admin members
+Route::get('/admin/emails', 'admin\MembersController@index');
+//admin reservations
 Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
 
 // admin users
