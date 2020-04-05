@@ -21,26 +21,6 @@ class MembersController extends Controller
         ]);
     }
 
-    public function create() {
-        return view('admin/members/create');
-    }
-
-    public function store() {
-        request()->validate([
-            'fname' => ['required', 'string', 'max:255'],
-            'lname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-            'phone_number' => ['required', 'string', 'min:10'],
-        ]);
-        $member = new Member();
-        $member->fname = request('fname');
-        $member->lname = request('lname');
-        $member->email = request('email');
-        $member->phone_number = request('phone_number');
-        $member->save();
-        return redirect('/admin/members');
-    }
-
     public function edit($id) {
         $member = Member::find($id);
         return view('admin/members/edit', [
