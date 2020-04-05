@@ -82,7 +82,7 @@
                                 <label for="password-confirm">Confirm</label>
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
-                                <div class="form-group">
+                            <div class="form-group">
                                 <label for="input-select">Role</label>
                                 <select class="form-control" id="inputRole" name="role_id">
                                     @foreach ($roles as $role)

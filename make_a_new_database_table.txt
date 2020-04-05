@@ -1,3 +1,24 @@
+works like this:
+
+migrations update the database and the relationships defined in them, and are timestamped.
+
+seeders add data to the databases programmatically for testing or otherwise.
+
+model (FoodItem.php) keeps track of the table. 
+it can be referenced to get values with FoodItem::All or FoodItem::find($id)
+you make an instance of one to add a value to the table (item = new FoodItem)
+
+controller (FoodItemController.php) keeps track of what to do with requests
+that are routed to it in web.php. It is where all CRUD operations are defined.
+They are defined as functions that return a view, with some variables passed
+down if necessary.
+
+views display the data in whatever form needed.
+
+
+This is how we added the food_categories and food_items tables to the database.
+
+
 1. php artisan make:model -m -s
 that generates the php file, as well as the migration and seeder
 
@@ -8,21 +29,8 @@ tables will now appear in database
 
 4. set up relationships by editing the migrations
 i added $table->bigInteger('category_id')->unsigned()->nullable(); to the food_item table migration
-to give it a relationship to food_category table. Then in the models: 
-class FoodCategory extends Model
-{
-    protected $table = 'food_categories';
-    public function food_items() {
-        return $this->hasMany('App\FoodItem', 'category_id');
-    }
-}
-class FoodItem extends Model
-{
-    protected $table = 'food_items';
-    return $this.belongsTo('App\FoodCategory');
-}
-
-establishes one to many relationship. every category has multiple food items.
+to give it a relationship to food_category table. Then make the models and
+establish one to many relationship. every category has multiple food items.
 
 
 5. php artisan migrate:refresh --seed
@@ -45,5 +53,5 @@ CRUD operations
 11. edit 'all' and 'edit' views to properly display data received in 
 the variables from the controller
 
-12. the 'create' form can basically be copied from 'edit', but get rid of the PUT 
-method and the references to values received (in value={{}})
+12. the 'create' form can basically be copie d from 'edit' (or visa versa), but get 
+rid of the PUT method and the references to values received(in value={{}})

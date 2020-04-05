@@ -40,24 +40,32 @@
                                     <th scope="col">id</th>
                                     <th scope="col">title</th>
                                     <th scope="col">description</th>
+                                    <th scope="col">image_url</th>
                                     <th scope="col">price</th>
+                                    <th scope="col">category_id</th>
                                     <th scope="col">date created</th>
                                     <th scope="col">edit</th>
                                     <th scope="col">delete</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($items as $item)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Texas Burger</td>
-                                    <td>Mouthwatering burger with lettuce, tomatoes, onions, and our speciall BBQ sauce</td>
-                                    <td>9.99</td>
-                                    <td>4/2/2020</td>
-                                    <td><a href="/admin/food-items/1/edit"><i class="far fa-edit"></i></a></td>
-                                <td><a href="/admin/food-items/1/delete" onclick="if (! confirm('Are you sure you want to delete this item?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
+                                    <th scope="row">{{$item->id}}</th>
+                                    <td>{{$item->title}}</td>
+                                    <td>{{$item->description}}</td>
+                                    <td>{{$item->image_url}}</td>
+                                    <td>{{$item->price}}</td>
+                                    <td>{{$item->category_id}}</td>
+                                    <td>{{date('m/d/y', strtotime($item->updated_at))}}</td>
+                                    <td><a href="/admin/food-items/{{$item->id}}/edit"><i class="far fa-edit"></i></a></td>
+                                    <td><a href="/admin/food-items/{{$item->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this item?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
+                        {{-- pagination --}}
+                        {{ $items->links() }}
                     </div>
                 </div>
             </div>

@@ -55,7 +55,7 @@
                                     <td>{{$category->image_url}}</td>
                                     <td>{{date('m/d/y', strtotime($category->updated_at))}}</td>
                                     <td><a href="/admin/food-categories/{{$category->id}}/edit"><i class="far fa-edit"></i></a></td>
-                                    <td><a href="/admin/food-categories/{{$category->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this user?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
+                                    <td><a href="/admin/food-categories/{{$category->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this category?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>
