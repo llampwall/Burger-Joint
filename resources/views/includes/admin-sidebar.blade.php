@@ -58,7 +58,7 @@
                     <div id="submenu-3" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/admin/emails">Email List<span class="badge badge-secondary">Email List</span></a>
+                                <a class="nav-link" href="/admin/members">Email List<span class="badge badge-secondary">Email List</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/admin/reservations">Reservations<span class="badge badge-secondary">Reservations</span></a>

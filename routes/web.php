@@ -46,7 +46,11 @@ Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 // admin customers
 
 // admin members
-Route::get('/admin/emails', 'admin\MembersController@index');
+Route::get('/admin/members', 'admin\MembersController@index');
+Route::get('/admin/members/{id}/edit', 'admin\MembersController@edit');
+Route::put('/admin/members/{id}', 'admin\MembersController@update');
+Route::get('/admin/members/{id}/delete', 'admin\MembersController@delete');
+
 //admin reservations
 Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
 

@@ -9,14 +9,13 @@
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="page-header">
-                <h2 class="pageheader-title">Edit Category</h2>
+                <h2 class="pageheader-title">Edit Member</h2>
                 <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                 <div class="page-breadcrumb">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="/admin/food-categories" class="breadcrumb-link">Food Categories</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Edit Category</li>
+                            <li class="breadcrumb-item active" aria-current="page">Edit Member</li>
                         </ol>
                     </nav>
                 </div>
@@ -34,36 +33,46 @@
             <!-- ============================================================== -->
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="card">
-                    <h5 class="card-header">Edit Category</h5>
+                    <h5 class="card-header">Edit Member - {{$member->fname}} {{$member->lname}}</h5>
                     <div class="card-body">
-                        <form method="POST" action="/admin/food-categories/{{$category->id}}">
+                        <form method="POST" action="/admin/members/{{$member->id}}">
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label for="inputTitle">Title</label>
-                                <input id="inputTitle" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ $category->title }}" required autocomplete="title" autofocus>
+                                <label for="inputFirstName">First Name</label>
+                                <input id="inputFirstName" type="text" class="form-control @error('fname') is-invalid @enderror" name="fname" value="{{ $member->fname }}" required autocomplete="fname" autofocus>
 
-                                @error('title')
+                                @error('fname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="inputDescription">Description</label>
-                                <input id="inputDescription" type="textarea" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus>
-                        
-                                @error('description')
+                                <label for="inputLastName">Last Name</label>
+                                <input id="inputLastName" type="text" class="form-control @error('lname') is-invalid @enderror" name="lname" value="{{ $member->lname }}" required autocomplete="lname" autofocus>
+
+                                @error('lname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="inputImageUrl">Image URL</label>
-                                <input id="inputImageUrl" type="text" class="form-control @error('image_url') is-invalid @enderror" name="image_url" value="{{ $category->image_url }}" required autocomplete="image_url">
-                        
-                                @error('image_url')
+                                <label for="inputEmail">Email</label>
+                                <input id="inputEmail" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $member->email }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPhone">Phone Number</label>
+                                <input id="inputPhone" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" required autocomplete="phone number">
+
+                                @error('pphone_number')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -88,3 +97,8 @@
 </div>
 
 @endsection
+
+
+
+
+

@@ -38,22 +38,30 @@
                             <thead>
                                 <tr>
                                     <th scope="col">id</th>
-                                    <th scope="col">full name</th>
+                                    <th scope="col">first name</th>
+                                    <th scope="col">last name</th>
                                     <th scope="col">email</th>
                                     <th scope="col">phone</th>
                                     <th scope="col">date created</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($members as $member)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Caroline Logan</td>
-                                    <td>cllogan22@gmail.com</td>
-                                    <td>8406279993</td>
-                                    <td>4/2/2020</td>
+                                    <th scope="row">{{$member->id}}</th>
+                                    <td>{{$member->fname}}</td>
+                                    <td>{{$member->lname}}</td>
+                                    <td>{{$member->email}}</td>
+                                    <td>{{$member->phone_number}}</td>
+                                    <td>{{date('m/d/y', strtotime($member->updated_at))}}</td>
+                                    <td><a href="/admin/members/{{$member->id}}/edit"><i class="far fa-edit"></i></a></td>
+                                    <td><a href="/admin/members/{{$member->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this member?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
+                        {{-- pagination --}}
+                        {{ $members->links() }}
                     </div>
                 </div>
             </div>
