@@ -23,7 +23,7 @@ Route::get('/offers', 'StaticPagesController@offers');
 Route::post('/offers', 'StaticPagesController@registerMember');
 Route::get('/contact', 'StaticPagesController@contact');
 Route::get('/about', 'StaticPagesController@about');
-
+Route::get('/offers/thankyou', 'StaticPagesController@thankYou');
 
 // admin
 Route::get('/admin', 'admin\AdminController@dashboard');
