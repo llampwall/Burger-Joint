@@ -44,6 +44,8 @@
                                     <th scope="col">guests</th>
                                     <th scope="col">date</th>
                                     <th scope="col">time</th>
+                                    <th scope="col">edit</th>
+                                    <th scope="col">delete</th>
                                 </tr>
                             </thead>
                             <tbody>

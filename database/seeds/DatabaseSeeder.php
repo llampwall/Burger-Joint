@@ -17,5 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call(FoodItemSeeder::class);
         $this->call(MembersSeeder::class);
         $this->call(ReservationSeeder::class);
+        $this->call(GeneralSettingsSeeder::class);
+        $this->call(SeoSettingsSeeder::class);
+        $this->call(SocialSettingsSeeder::class);
     }
 }

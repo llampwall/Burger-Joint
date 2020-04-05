@@ -47,8 +47,6 @@ Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
 Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
 Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
-// admin customers
-
 // admin members
 Route::get('/admin/members', 'admin\MembersController@index');
 Route::get('/admin/members/{id}/edit', 'admin\MembersController@edit');
@@ -68,6 +66,14 @@ Route::post('/admin/users', 'admin\UsersController@store');
 Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
 Route::put('/admin/users/{id}', 'admin\UsersController@update');
 Route::get('/admin/users/{id}/delete', 'admin\UsersController@delete');
+
+// admin settings
+Route::get('/admin/settings/general', 'admin\SettingController@general');
+Route::post('/admin/settings/general', 'admin\SettingController@saveGeneral');
+Route::get('/admin/settings/seo', 'admin\SettingController@seo');
+Route::post('/admin/settings/seo', 'admin\SettingController@saveSeo');
+Route::get('/admin/settings/social', 'admin\SettingController@social');
+Route::post('/admin/settings/social', 'admin\SettingController@saveSocial');
 
 // admin user auth
 Route::get('/admin/register', function () {

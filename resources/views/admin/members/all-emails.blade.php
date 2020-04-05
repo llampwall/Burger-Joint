@@ -43,6 +43,8 @@
                                     <th scope="col">email</th>
                                     <th scope="col">phone</th>
                                     <th scope="col">date created</th>
+                                    <th scope="col">edit</th>
+                                    <th scope="col">delete</th>
                                 </tr>
                             </thead>
                             <tbody>

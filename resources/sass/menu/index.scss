@@ -85,6 +85,8 @@
                     img {
                         width: 95%;
                         max-width: 250px;
+                        position: relative;
+                        z-index: -1;
                     }
                 }
             }

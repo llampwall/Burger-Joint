@@ -3624,6 +3624,8 @@ h2 {
 #menu-index #food-preview .food-slider .slide .content img {
   width: 95%;
   max-width: 250px;
+  position: relative;
+  z-index: -1;
 }
 
 @media (max-width: 767.98px) {
