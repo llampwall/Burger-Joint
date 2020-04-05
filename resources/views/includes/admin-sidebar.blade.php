@@ -84,13 +84,13 @@
                     <div id="submenu-5" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/settings/general">General Settings<span class="badge badge-secondary">General Settings</span></a>
+                                <a class="nav-link" href="/admin/settings/general">General Settings<span class="badge badge-secondary">General Settings</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/settings/social">Social Media<span class="badge badge-secondary">Social Media</span></a>
+                                <a class="nav-link" href="/admin/settings/social">Social Media<span class="badge badge-secondary">Social Media</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/settings/SEO">SEO<span class="badge badge-secondary">SEO</span></a>
+                                <a class="nav-link" href="/admin/settings/seo">SEO<span class="badge badge-secondary">SEO</span></a>
                             </li>
                         </ul>
                     </div>
