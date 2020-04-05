@@ -1,0 +1,38 @@
+1. php artisan make:model -m -s
+that generates the php file, as well as the migration and seeder
+
+2. edit the migration to include the desired columns
+
+3. php artisan migrate
+tables will now appear in database
+
+4. set up relationships by editing the migrations
+i added $table->bigInteger('category_id')->unsigned()->nullable(); to the food_item table migration
+to give it a relationship to food_category table. Then in the models: 
+class FoodCategory extends Model
+{
+    protected $table = 'food_categories';
+    public function food_items() {
+        return $this->hasMany('App\FoodItem', 'category_id')
+    }
+}
+class FoodItem extends Model
+{
+    protected $table = 'food_items';
+    return $this.belongsTo('App\FoodCategory');
+}
+
+establishes one to many relationship. every category has multiple food items.
+
+
+5. php artisan migrate:refresh --seed
+
+6. add this to fooditems migration: 
+Schema::table('food_items', function (Blueprint $table) {
+    $table->foreign('category_id')->references('id')->on('food_categories')->onDelete('set null');
+});
+
+7. php artisan migrate:refresh --seed
+
+
+8. the tables are ready npw and you can work on the seeders.
