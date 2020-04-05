@@ -36,14 +36,38 @@
                 <div class="card">
                     <h5 class="card-header">Edit Category</h5>
                     <div class="card-body">
-                        <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                        <form method="POST" action="/admin/food-categories/{{$category->id}}">
+                            @csrf
+                            @method('PUT')
                             <div class="form-group">
-                                <label for="inputCategory">Edit Name</label>
-                                <input id="inputCategory" type="text" name="category" data-parsley-trigger="change" required="" placeholder="Enter name" autocomplete="off" class="form-control">
+                                <label for="inputTitle">Title</label>
+                                <input id="inputTitle" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ $category->title }}" required autocomplete="title" autofocus>
+
+                                @error('title')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="form-group">
-                                <label for="inputImage">Edit Image URL</label>
-                                <input id="inputImage" type="text" name="image" data-parsley-trigger="change" required="" placeholder="Enter image url" autocomplete="off" class="form-control">
+                                <label for="inputDescription">Description</label>
+                                <input id="inputDescription" type="textarea" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus>
+                        
+                                @error('description')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="inputImageUrl">Image URL</label>
+                                <input id="inputImageUrl" type="text" class="form-control @error('image_url') is-invalid @enderror" name="image_url" value="{{ $category->image_url }}" required autocomplete="image_url">
+                        
+                                @error('image_url')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="row">
                                 <div class="col-sm-12 pl-0">
@@ -64,8 +88,3 @@
 </div>
 
 @endsection
-
-
-
-
-

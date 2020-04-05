@@ -8,6 +8,6 @@ class FoodCategory extends Model
 {
     protected $table = 'food_categories';
     public function food_items() {
-        return $this->hasMany('App\FoodItem', 'category_id')
+        return $this->hasMany('App\FoodItem', 'category_id');
     }
 }

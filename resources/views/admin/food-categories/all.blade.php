@@ -39,21 +39,29 @@
                                 <tr>
                                     <th scope="col">id</th>
                                     <th scope="col">title</th>
+                                    <th scope="col">description</th>
+                                    <th scope="col">image_url</th>
                                     <th scope="col">date created</th>
                                     <th scope="col">edit</th>
                                     <th scope="col">delete</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($categories as $category)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Starters</td>
-                                    <td>4/2/2020</td>
-                                    <td><a href="/admin/food-categories/1/edit"><i class="far fa-edit"></i></a></td>
-                                <td><a href="/admin/food-categories/1/delete" onclick="if (! confirm('Are you sure you want to delete this category?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
+                                    <th scope="row">{{$category->id}}</th>
+                                    <td>{{$category->title}}</td>
+                                    <td>{{$category->description}}</td>
+                                    <td>{{$category->image_url}}</td>
+                                    <td>{{date('m/d/y', strtotime($category->updated_at))}}</td>
+                                    <td><a href="/admin/food-categories/{{$category->id}}/edit"><i class="far fa-edit"></i></a></td>
+                                    <td><a href="/admin/food-categories/{{$category->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this user?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
+                        {{-- pagination --}}
+                        {{ $categories->links() }}
                     </div>
                 </div>
             </div>
