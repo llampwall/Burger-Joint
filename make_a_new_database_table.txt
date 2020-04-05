@@ -37,8 +37,13 @@ check the tables, they should be set up properly.
 
 8. set up the seeders to add some data.
 
-9. set up the FoodCategoriesController and FoodItemsController to handle CRUD operations
+9. set up the FoodCategoriesController and FoodItemsController to handle 
+CRUD operations
 
 10. edit web.php to handle the necessary routes and send them to the controller
 
-11. edit 'all', 'create', and 'edit' views to properly display data received in the variables from the controller
+11. edit 'all' and 'edit' views to properly display data received in 
+the variables from the controller
+
+12. the 'create' form can basically be copied from 'edit', but get rid of the PUT 
+method and the references to values received (in value={{}})
