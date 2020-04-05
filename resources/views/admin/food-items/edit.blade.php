@@ -83,7 +83,11 @@
                                 <label for="input-select">Category</label>
                                 <select class="form-control" id="inputCategory" name="category_id">
                                     @foreach ($categories as $category)
-                                        <option value="{{$category->id}}">{{$category->title}}</option>
+                                        <option value="{{$category->id}}"
+                                        @if ($category->id == $item->category_id)
+                                            selected
+                                        @endif
+                                        >{{$category->title}}</option>
                                     @endforeach
                                 </select>
                               </div>
