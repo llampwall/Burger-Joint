@@ -3702,6 +3702,24 @@ h2 {
   color: black;
 }
 
+#reserved {
+  padding: 100px;
+  text-align: center;
+}
+
+#reserved h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+#reserved h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+}
+
 * {
   box-sizing: border-box;
 }

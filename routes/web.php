@@ -19,11 +19,14 @@ Route::get('/', 'StaticPagesController@home');
 Route::get('/menu', 'StaticPagesController@menu');
 Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
 Route::get('/reservations', 'StaticPagesController@reservations');
+Route::post('/reservations', 'StaticPagesController@reserve');
 Route::get('/offers', 'StaticPagesController@offers');
 Route::post('/offers', 'StaticPagesController@registerMember');
 Route::get('/contact', 'StaticPagesController@contact');
 Route::get('/about', 'StaticPagesController@about');
 Route::get('/offers/thankyou', 'StaticPagesController@thankYou');
+Route::get('/reservations/reserved', 'StaticPagesController@reserved');
+
 
 // admin
 Route::get('/admin', 'admin\AdminController@dashboard');
@@ -53,7 +56,10 @@ Route::put('/admin/members/{id}', 'admin\MembersController@update');
 Route::get('/admin/members/{id}/delete', 'admin\MembersController@delete');
 
 //admin reservations
-Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
+Route::get('/admin/reservations', 'admin\ReservationController@index');
+Route::get('/admin/reservations/{id}/edit', 'admin\ReservationController@edit');
+Route::put('/admin/reservations/{id}', 'admin\ReservationController@update');
+Route::get('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
 
 // admin users
 Route::get('/admin/users', 'admin\UsersController@index');
