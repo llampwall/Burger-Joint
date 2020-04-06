@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Member;
 use App\Reservation;
+use App\GeneralSetting;
+use App\SeoSetting;
+use App\SocialSetting;
 
 class StaticPagesController extends Controller
 {
@@ -17,6 +20,7 @@ class StaticPagesController extends Controller
     }
 
     public function singleMenu() {
+
         return view('menu/single-menu');
     }
 

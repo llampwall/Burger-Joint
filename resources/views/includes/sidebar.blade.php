@@ -1,6 +1,6 @@
 <div class="sidebar">
   <a href="/" class="logo">
-    <img src="/img/logo.png">
+  <img src="{{ $settings['general']->logo_image_url }}">
   </a>
   <div class="menu">
 
@@ -28,17 +28,18 @@
   </div>
 
   <div class="social-icons">
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="{{ $settings['social']->facebook_url }}" target='new'><i class="fa fa-facebook"></i></a>
+    <a href="{{ $settings['social']->twitter_url }}" target='new'><i class="fa fa-twitter"></i></a>
+    <a href="{{ $settings['social']->instagram_url }}" target='new'><i class="fa fa-instagram"></i></a>
   </div>
   <div class="location">
     <div class="address">
-      234 Main St,<br>
-      Los Angeles, CA 90069
+      {{ $settings['general']->address1 }} {{ $settings['general']->address2 }}<br>
+      {{ $settings['general']->city }}, {{ $settings['general']->state }}
+      {{ $settings['general']->zip }}
     </div>
     <div class="phone">
-      <a href="tel:+13106038967">310-603-8967</a>
+      <a href="tel:+1{{ $settings['general']->phone_number }}">{{ $settings['general']->phone_number }}</a>
     </div>
   </div>
 </div>

@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\GeneralSetting;
+use App\SeoSetting;
+use App\SocialSetting;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,3 +93,16 @@ Route::get('/admin/login', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// pass the settings database table data to all pages
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'pages/reserved', 'pages/thankyou', 'menu/index', 'menu/single-menu'], function($view) {
+    $generalsettings = GeneralSetting::find(1);
+    $socialsettings = SocialSetting::find(1);
+    $seosettings = SeoSetting::find(1);
+
+    $view->with('settings', [
+        'general' => $generalsettings,
+        'social' => $socialsettings, 
+        'seo' => $seosettings
+    ]);
+});
