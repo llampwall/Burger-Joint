@@ -8,10 +8,22 @@
         margin-bottom: 2.5rem;
     }
 
-    p {
+    h3 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: black;
+        margin-bottom: 1rem;
+    }
+
+    .address, .phone {
         font-size: 1rem;
         line-height: 1.2;
         margin-bottom: 2rem;
+    }
+
+    iframe {
+        width: 100%;
+        border: 2px solid black;
     }
 }
 // Small devices - landscape phones (under 768px)

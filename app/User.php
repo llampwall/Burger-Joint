@@ -37,6 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+    // user can have several roles
     public function roles() {
         return $this->belongsToMany('App\Role');
     }

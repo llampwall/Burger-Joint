@@ -3510,10 +3510,23 @@ h2 {
   margin-bottom: 2.5rem;
 }
 
-#contact-page p {
+#contact-page h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+#contact-page .address,
+#contact-page .phone {
   font-size: 1rem;
   line-height: 1.2;
   margin-bottom: 2rem;
+}
+
+#contact-page iframe {
+  width: 100%;
+  border: 2px solid black;
 }
 
 @media (max-width: 767.98px) {

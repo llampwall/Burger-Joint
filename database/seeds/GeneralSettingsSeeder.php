@@ -15,12 +15,12 @@ class GeneralSettingsSeeder extends Seeder
         DB::table('general_settings')->insert([
             'site_title' => 'JordanBurger',
             'logo_image_url' => '/img/logo.png',
-            'address1' => '950 N Kings Rd',
-            'address2' => 'Unit 345',
-            'city' => 'West Hollywood',
+            'address1' => '7009 Sunset Blvd',
+            'address2' => null,
+            'city' => 'Los Angeles',
             'state' => 'CA',
-            'zip' => 90069,
-            'phone_number' => '310-683-8968',
+            'zip' => 90028,
+            'phone_number' => '(800) 786-1000',
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);
