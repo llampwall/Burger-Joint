@@ -34,6 +34,7 @@ Route::get('/reservations/reserved', 'StaticPagesController@reserved');
 
 // admin
 Route::get('/admin', 'admin\AdminController@dashboard');
+Route::get('/admin/est_daily_revenue', 'admin\AdminController@dailyRevenueLast30');
 
 // admin food categories
 Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index')->middleware('role:Admin,Employee');
