@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+{{ $settings['general']->site_title }} - Menu
+@endsection
+
 @section('content')
     <div id="menu-index">
       <section id="food-preview">

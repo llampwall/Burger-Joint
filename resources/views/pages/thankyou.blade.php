@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+{{ $settings['general']->site_title }} - Thank You
+@endsection
+
 @section('content')
   
 <div id="thankyou">

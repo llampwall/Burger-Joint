@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+{{ $settings['general']->site_title }} - {{$category}}
+@endsection
+
 @section('content')
     <div id="single-menu">
         <div class="row">

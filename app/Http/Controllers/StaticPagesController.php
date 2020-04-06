@@ -5,9 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Member;
 use App\Reservation;
-use App\GeneralSetting;
-use App\SeoSetting;
-use App\SocialSetting;
+
 
 class StaticPagesController extends Controller
 {
@@ -19,9 +17,11 @@ class StaticPagesController extends Controller
         return view('menu/index');
     }
 
-    public function singleMenu() {
+    public function singleMenu($slug) {
 
-        return view('menu/single-menu');
+        return view('menu/single-menu', [
+            'category' => ucfirst($slug)
+        ]);
     }
 
     public function about() {
