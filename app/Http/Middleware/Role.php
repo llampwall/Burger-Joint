@@ -25,10 +25,5 @@ class Role
             }
         }
         return redirect('/admin');
-        // dd($roles);
-        // if(!Auth::check()) {
-        //     return redirect('/login');
-        // }
-        
     }
 }

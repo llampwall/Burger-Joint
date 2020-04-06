@@ -56,8 +56,8 @@
                                     <td>{{$reservation->email}}</td>
                                     <td>{{$reservation->phone_number}}</td>
                                     <td>{{$reservation->guests}}</td>
+                                    <td>{{$reservation->created_at}}</td>
                                     <td>{{$reservation->time}}</td>
-                                    <td>{{date('m/d/y', strtotime($reservation->updated_at))}}</td>
                                     <td><a href="/admin/reservations/{{$reservation->id}}/edit"><i class="far fa-edit"></i></a></td>
                                     <td><a href="/admin/reservations/{{$reservation->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this reservation?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
                                 </tr>

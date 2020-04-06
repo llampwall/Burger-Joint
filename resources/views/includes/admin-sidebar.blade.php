@@ -30,9 +30,11 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="/admin/food-categories">All Categories<span class="badge badge-secondary">All Categories</span></a>
                                         </li>
+                                        @if (Auth::user()->isAdmin())
                                         <li class="nav-item">
                                             <a class="nav-link" href="/admin/food-categories/create">Create Category</a>
                                         </li>
+                                        @endif
                                     </ul>
                                 </div>
                             </li>
@@ -43,9 +45,11 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="/admin/food-items">All Items<span class="badge badge-secondary">All Items</span></a>
                                         </li>
+                                        @if (Auth::user()->isAdmin())
                                         <li class="nav-item">
                                             <a class="nav-link" href="/admin/food-items/create">Create Item</a>
                                         </li>
+                                        @endif
                                     </ul>
                                 </div>
                             </li>
@@ -66,6 +70,7 @@
                         </ul>
                     </div>
                 </li>
+                @if (Auth::user()->isAdmin())
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fa fa-fw fa-rocket"></i>Users</a>
                     <div id="submenu-4" class="collapse submenu" style="">
@@ -95,6 +100,7 @@
                         </ul>
                     </div>
                 </li>
+                @endif
             </ul>
         </div>
     </nav>

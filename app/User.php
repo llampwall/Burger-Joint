@@ -42,4 +42,10 @@ class User extends Authenticatable
     public function roles() {
         return $this->belongsToMany('App\Role');
     }
+
+
+    // check for admin status
+    public function isAdmin() {
+        return ($this->roles->contains(1));
+    }
 }

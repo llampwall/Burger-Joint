@@ -52,7 +52,7 @@ Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update')->middle
 Route::get('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete')->middleware('role:Admin');
 
 // admin members
-Route::get('/admin/members', 'admin\MembersController@index')->middleware('role:Admin');
+Route::get('/admin/members', 'admin\MembersController@index')->middleware('role:Admin,Employee');
 Route::get('/admin/members/{id}/edit', 'admin\MembersController@edit')->middleware('role:Admin');
 Route::put('/admin/members/{id}', 'admin\MembersController@update')->middleware('role:Admin');
 Route::get('/admin/members/{id}/delete', 'admin\MembersController@delete')->middleware('role:Admin');
