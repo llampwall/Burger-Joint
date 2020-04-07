@@ -80,7 +80,7 @@ class FoodItemSeeder extends Seeder
         DB::table('food_items')->insert([
             'title' => 'Steak & Fries',
             'description' => 'Juicy NY Strip Steak served with au jus and next to a pile of fresh cut french fries.',
-            'image_url' => '/img/nachos.png',
+            'image_url' => '/img/entrees.png',
             'price' => 17.99,
             'category_id' => 3,
             'updated_at' => Carbon::now(),
@@ -90,7 +90,7 @@ class FoodItemSeeder extends Seeder
         DB::table('food_items')->insert([
             'title' => 'House Salad',
             'description' => 'Tomatoes, cucumber, avocado, and feta on a bed of romaine lettuce and drizzled with Italian dressing.',
-            'image_url' => '/img/nachos.png',
+            'image_url' => '/img/salad.png',
             'price' => 8.99,
             'category_id' => 4,
             'updated_at' => Carbon::now(),
@@ -100,7 +100,7 @@ class FoodItemSeeder extends Seeder
         DB::table('food_items')->insert([
             'title' => 'Chocolate Cake',
             'description' => 'The richest, dreamiest, chocolatiest chocolate cake with chocolate icing, served with vanilla ice cream.',
-            'image_url' => '/img/nachos.png',
+            'image_url' => '/img/dessert.png',
             'price' => 7.99,
             'category_id' => 5,
             'updated_at' => Carbon::now(),

@@ -12,7 +12,10 @@ use App\FoodItem;
 class StaticPagesController extends Controller
 {
     public function home() {
-        return view('home');
+        $foodcategories = FoodCategory::All();
+        return view('home', [
+            'categories' => $foodcategories
+        ]);
     }
 
     public function menu() {

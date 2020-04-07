@@ -17,6 +17,7 @@
 @import "menu/single-menu";
 @import "pages/thankyou";
 @import "pages/reserved";
+@import "food-slider";
 
 * {
     box-sizing: border-box;
@@ -266,82 +267,6 @@ body {
         cursor: pointer;
     }
 
-    .food-slider {
-        width: 100%;
-        max-width: 1400px;
-        display: flex;
-        margin-bottom: 2rem;
-
-        .slide {
-            width: 20%;
-            height: 500px;
-            position: relative;
-            overflow: hidden;
-
-            &:hover {
-                cursor: pointer;
-
-                .background {
-                    background-color: #ed4852;
-                    transform: translate3d(0, -200px, 0);
-                }
-
-                .content {
-                    .food-title {
-                        color: white;
-                    }
-
-                    .description {
-                        color: white;
-                    }
-                }
-            }
-
-            .background {
-                background: white;
-                height: 100%;
-                width: 100%;
-                z-index: 1;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                transition: transform 0.3s ease-in-out;
-            }
-
-            .content {
-                height: 100%;
-                width: 100%;
-                z-index: 2;
-                position: absolute;
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                transition: all 0.3s ease-in-out;
-
-                .food-title {
-                    font-size: 2rem;
-                    font-weight: 900;
-                    margin-bottom: 3rem;
-                    color: #ed4852;
-                }
-
-                .description {
-                    font-size: 0.8rem;
-                    font-weight: 300;
-                    line-height: 1.8;
-                    margin-bottom: 3rem;
-                    color: #7a8d99;
-                }
-
-                img {
-                    width: 95%;
-                    max-width: 250px;
-                }
-            }
-        }
-    }
 }
 // Extra small devices - phones (under 576px)
 @include media-breakpoint-down(xs) {}
@@ -372,15 +297,6 @@ body {
 
         .button-rounded {
             margin: 0 auto 4rem;
-        }
-
-        .food-slider {
-            display: flex;
-            flex-direction: column;
-
-            .slide {
-                width: 100%;
-            }
         }
     }
 }
@@ -434,22 +350,5 @@ body {
             margin: 0 auto 4rem;
         }
 
-        .food-slider {
-            // display: grid;
-            // grid-template-columns: 1fr 1fr 1fr;
-            .slide {
-                &:hover {
-                    cursor: pointer;
-
-                    .background {
-                        background-color: #ed4852;
-                        transform: translate3d(0, -50px, 0);
-                    }
-                }
-
-            }
-        }
     }
 }
-// Large devices - desktops (under 1200px)
-@include media-breakpoint-down(lg) {}
