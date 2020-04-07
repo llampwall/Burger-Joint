@@ -3686,6 +3686,10 @@ h2 {
   margin-bottom: 2rem;
 }
 
+#single-menu .image img {
+  width: 100%;
+}
+
 @media (max-width: 767.98px) {
   #single-menu {
     height: 100vh;

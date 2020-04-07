@@ -216,7 +216,7 @@
             data: tableData,
             xkey: 'x',
             ykeys: ['y'],
-            labels: ['Y'],
+            labels: ['revenue ($)'],
             lineColors: ['#5969ff'],
             resize: true
 

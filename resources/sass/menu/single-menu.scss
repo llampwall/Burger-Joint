@@ -29,7 +29,12 @@
             margin-bottom: 2rem;
         }
     }
-    
+
+    .image {
+        img {
+            width: 100%;
+        }   
+    }
 
 }
 // Small devices - landscape phones (under 768px)
@@ -43,5 +48,6 @@
 @include media-breakpoint-down(md) {
     #single-menu {
         padding: 35px;
+
     }
 }
