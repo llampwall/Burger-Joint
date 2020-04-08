@@ -3606,6 +3606,10 @@ h2 {
   color: black;
 }
 
+#single-menu .item .price {
+  display: block;
+}
+
 #single-menu .item .description {
   font-size: 1rem;
   margin-bottom: 2rem;
